@@ -1,9 +1,9 @@
 {
-  "name": "@navify/pwa-elements",
-  "version": "3.1.1",
+  "name": "@familyjs/pwa-elements",
+  "version": "3.1.0",
   "description": "Rindo Component Starter",
   "main": "dist/index.js",
-  "unpkg": "dist/navifypwaelements/navifypwaelements.js",
+  "unpkg": "dist/familypwaelements/familypwaelements.js",
   "types": "dist/types/index.d.ts",
   "module": "dist/index.mjs",
   "collection": "dist/collection/collection-manifest.json",
@@ -11,28 +11,24 @@
     "dist/",
     "loader/"
   ],
-  "publishConfig": {
-    "access": "public"
-  },
   "scripts": {
     "build": "rindo build",
     "start": "rindo build --dev --watch --serve",
-    "release": "np",
-    "version": "npm run build",
-    "test": "echo test"
+    "release": "np --no-tests",
+    "version": "npm run build"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/navify/navify-pwa-elements.git"
+    "url": "git+https://github.com/familyjs/family-pwa-elements.git"
   },
-  "author": "Navify Team",
+  "author": "Family Team",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/navify/navify-pwa-elements"
+    "url": "https://github.com/familyjs/family-pwa-elements"
   },
-  "homepage": "https://github.com/navify/navify-pwa-elements",
+  "homepage": "https://github.com/familyjs/family-pwa-elements",
   "devDependencies": {
-    "@rindo/core": "^1.8.12",
+    "@rindo/core": "1.8.12",
     "np": "^6.5.0",
     "workbox-build": "^4.3.1"
   }

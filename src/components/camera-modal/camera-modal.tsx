@@ -8,7 +8,7 @@ import { h, Event, EventEmitter, Component, Method, Prop } from '@rindo/core';
 export class PWACameraModal {
   @Prop() facingMode: string = 'user';
 
-  @Event() onPhoto: EventEmitter;
+  @Event() photo: EventEmitter;
   @Event() noDeviceError: EventEmitter;
 
   _modal: HTMLElement;
@@ -23,7 +23,7 @@ export class PWACameraModal {
         return;
       }
       const photo = e.detail;
-      this.onPhoto.emit(photo);
+      this.photo.emit(photo);
     });
 
     camera.addEventListener('noDeviceError', async (e: any) => {

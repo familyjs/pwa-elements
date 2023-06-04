@@ -1,7 +1,7 @@
 import { Config } from '@rindo/core';
 
 export const config: Config = {
-  namespace: 'navifypwaelements',
+  namespace: 'familypwaelements',
   outputTargets: [
     {
       type: 'dist',

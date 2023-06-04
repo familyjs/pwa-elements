@@ -7,14 +7,14 @@ import { h, Event, EventEmitter, Component, Listen, Element, Prop } from '@rindo
 })
 export class PWACameraModal {
   @Element() el;
-  @Event() onPhoto: EventEmitter;
+  @Event() photo: EventEmitter;
   @Event() noDeviceError: EventEmitter;
   @Prop() facingMode: string = 'user';
   @Prop() noDevicesText = 'No camera found';
   @Prop() noDevicesButtonText = 'Choose image';
 
   handlePhoto = async (photo: Blob) => {
-    this.onPhoto.emit(photo);
+    this.photo.emit(photo);
   }
 
   handleNoDeviceError = async (photo: any) => {
@@ -23,7 +23,7 @@ export class PWACameraModal {
 
   handleBackdropClick(e: MouseEvent) {
     if (e.target !== this.el) {
-      this.onPhoto.emit(null);
+      this.photo.emit(null);
     }
   }
 
@@ -34,7 +34,7 @@ export class PWACameraModal {
   @Listen('keyup', { target: 'body' })
   handleBackdropKeyUp(e: KeyboardEvent) {
     if (e.key === "Escape") {
-      this.onPhoto.emit(null);
+      this.photo.emit(null);
     }
   }
 

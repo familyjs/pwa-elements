@@ -16,7 +16,7 @@ export class PWAActionSheet {
 
   @Prop() options: ActionSheetOption[] = [];
 
-  @Event() onSelection: EventEmitter;
+  @Event() selection: EventEmitter;
 
   @State() open = false;
 
@@ -41,7 +41,7 @@ export class PWAActionSheet {
 
   handleOptionClick(e: MouseEvent, i: number) {
     e.stopPropagation();
-    this.onSelection.emit(i);
+    this.selection.emit(i);
     this.close();
   }
 
