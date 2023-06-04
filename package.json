@@ -11,6 +11,9 @@
     "dist/",
     "loader/"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build": "rindo build",
     "start": "rindo build --dev --watch --serve",
