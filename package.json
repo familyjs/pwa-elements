@@ -1,6 +1,6 @@
 {
   "name": "@familyjs/pwa-elements",
-  "version": "3.2.1",
+  "version": "3.2.2",
   "description": "Rindo Component Starter",
   "main": "dist/index.cjs.js",
   "unpkg": "dist/familypwaelements/familypwaelements.js",
